@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %} Test Page {% endblock %} {% block
+content %}
+<h1>Test Page</h1>
+<ul>
+  {% for item in mylist %}
+  <li {% if item =="30" %}style="color: red" {% endif %}>{{ item }}</li>
+  {% endfor %}
+</ul>
+<p>{{ some_text }}</p>
+<p>{{ some_text|upper }}</p>
+<p>{{ some_text|lower }}</p>
+<p>{{ some_text|title }}</p>
+<p>{{ some_text|replace('l', 'L') }}</p>
+<p>{{ some_text|reverse_string }}</p>
+{% endblock %}
